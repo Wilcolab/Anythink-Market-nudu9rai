@@ -5,6 +5,7 @@ import agent from "../agent";
 import { connect } from "react-redux";
 import {
   FOLLOW_USER,
+  UNFOLLOW_USER,
   PROFILE_PAGE_LOADED,
   PROFILE_PAGE_UNLOADED,
 } from "../constants/actionTypes";
@@ -18,6 +19,12 @@ const mapDispatchToProps = (dispatch) => ({
       type: FOLLOW_USER,
       payload: agent.Profile.follow(username),
     }),
+  onUnfollow: (username) =>
+    dispatch({
+      type: UNFOLLOW_USER,
+      payload: agent.Profile.unfollow(username),
+    }),
+
 });
 
 class ProfileFavorites extends Profile {
