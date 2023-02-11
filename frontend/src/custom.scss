@@ -27,7 +27,6 @@ body {
   background-position: top;
   background-repeat: no-repeat;
 }
-
 .page {
   margin-top: 2 * $spacer;
   margin-bottom: 2 * $spacer;
@@ -55,4 +54,8 @@ body {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+
+.user-info {
+  min-width: 800px;
 }
