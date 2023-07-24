@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import agent from "../agent"
 
-const searchBox = (props) => {
-    const id = props.id
+const searchBox = (id, onChange) => {
+    const id = id
     const [input, setInput] = useState("")
 
     const handleChange = (value) => {
         setInput(value)
         if (value.length > 2) {
-            props.onChange(value, (page) => agent.Items.byTitle(value, page), agent.Items.byTitle(value))
+            onChange(value, (page) => agent.Items.byTitle(value, page), agent.Items.byTitle(value))
         }
     }
 
