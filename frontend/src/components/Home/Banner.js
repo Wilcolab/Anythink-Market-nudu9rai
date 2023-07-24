@@ -10,7 +10,7 @@ const Banner = (onSearchBarChange) => {
         <div>
           <span>A place to </span>
           <span id="get-part">get </span>
-          <searchBox onChange={onSearchBarChange} id="search-box" />
+          <searchBox id="search-box" onChange={onSearchBarChange} />
           <span> the cool stuff.</span>
         </div>
       </div>

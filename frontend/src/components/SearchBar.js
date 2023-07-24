@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import agent from "../agent"
 
-const searchBox = (onChange) => {
+const searchBox = (id, onChange) => {
+    const id = id
     const [input, setInput] = useState("")
 
     const handleChange = (value) => {
