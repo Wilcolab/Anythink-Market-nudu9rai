@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import agent from "../agent"
 
-const searchBox = (onChange) => {
+const SearchBar = (onChange) => {
     const [input, setInput] = useState("")
 
     const handleChange = (value) => {
@@ -21,4 +21,4 @@ const searchBox = (onChange) => {
     );
 }
 
-export default searchBox;
+export default SearchBar;
