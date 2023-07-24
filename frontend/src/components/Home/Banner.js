@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../imgs/logo.png";
-import SearchBar from "../SearchBar"
+import searchBox from "../SearchBar"
 
 const Banner = (onSearchBarChange) => {
   return (
@@ -10,7 +10,7 @@ const Banner = (onSearchBarChange) => {
         <div>
           <span>A place to </span>
           <span id="get-part">get </span>
-          <SearchBar id="search-box" onChange={onSearchBarChange} />
+          <searchBox onChange={onSearchBarChange} id="search-box" />
           <span> the cool stuff.</span>
         </div>
       </div>
