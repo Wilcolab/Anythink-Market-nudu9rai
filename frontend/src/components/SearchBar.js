@@ -13,6 +13,7 @@ const SearchBar = (onChange) => {
 
     return (
         <input
+            id="search-box"
             key="search-bar"
             value={input}
             placeholder={"What is it that you truly desire?"}
