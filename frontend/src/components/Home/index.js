@@ -68,7 +68,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <Banner onSearchBarChange={this.props.onSearchBarChange} />
+        <Banner onSearchQueryChange={this.onSearchQueryChange} searchQuery={this.state.searchQuery} />
 
         <div className="container page">
           <Tags tags={this.props.tags} onClickTag={this.props.onClickTag} />

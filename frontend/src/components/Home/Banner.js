@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../imgs/logo.png";
 import SearchBar from "../SearchBar"
 
-const Banner = (onSearchBarChange) => {
+const Banner = (props) => {
   return (
     <div className="banner text-white">
       <div className="container p-4 text-center">
@@ -10,7 +10,7 @@ const Banner = (onSearchBarChange) => {
         <div>
           <span>A place to </span>
           <span id="get-part">get </span>
-          <SearchBar onChange={onSearchBarChange} />
+          <SearchBar onSearchQueryChange={props.onSearchQueryChange} searchQuery={props.searchQuery} />
           <span> the cool stuff.</span>
         </div>
       </div>
