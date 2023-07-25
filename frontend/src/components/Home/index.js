@@ -30,6 +30,26 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchQuery: "",
+      searchResult: { items: [], itemsCount: 0 }
+    }
+    this.onSearchQueryChange = this.onSearchQueryChange.bind(this);
+  }
+
+  onSearchQueryChange = (value) => {
+    this.setState({ searchQuery: value })
+    if (value.length <= 2) {
+      value = ""
+    }
+    const pager = (page) => agent.Items.byTitle(value, page)
+    const result = agent.Items.byTitle(value)
+    this.setState({ searchResult: result })
+    this.props.onSearchBarChange(value, pager, result)
+  }
+
   componentWillMount() {
     const tab = "all";
     const itemsPromise = agent.Items.all;
